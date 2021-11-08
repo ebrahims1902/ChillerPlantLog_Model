@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Model Prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Chiller plant logs prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Enter Float or Integer values to predict
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action="{{url_for('predict')}}" method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="first_name"><b>Capacity Percentage</b></label>
+            <br>
+          <input placeholder="Capacity in Percentage" name="Capacity Percentage" id="first_name" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="first_name"><b>CHWST (°C)</b></label>
+            <br>
+          <input placeholder="CHWST (°C)" name="CHWST (°C)" id="first_name" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="first_name"><b>CHWRT (°C)</b></label>
+            <br>
+          <input placeholder="CHWRT (°C)" name="CHWRT (°C)" id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="first_name"><b>OutsideAir Temperature</b></label>
+            <br>
+          <input placeholder="OutsideAir Temperature" name="OutsideAir Temperature" id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="first_name"><b>Relative Humidity</b></label>
+            <br>
+          <input placeholder="Relative Humidity" name="Relative Humidity" id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="first_name"><b>CHWST SP (°C)</b></label>
+            <br>
+          <input placeholder="CHWST SP (°C)" name="CHWST SP (°C)" id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="first_name"><b>ECWT SP (°C)</b></label>
+            <br>
+          <input placeholder="ECWT SP (°C)" name="ECWT SP (°C)" id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="first_name"><b>ECWT (°C)</b></label>
+            <br>
+          <input placeholder="ECWT (°C)" name="ECWT (°C)" id="first_name" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+
+          <label for="first_name"><b>LCWT (°C) </b></label>
+            <br>
+          <input id="first_name" name="LCWT (°C)" placeholder="LCWT (°C)"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="first_name"><b>Differential Temperature (°C)</b></label>
+            <br>
+          <input id="first_name" name="Differential Temperature (°C)" placeholder="Differential Temperature (°C)" type="text" class="validate">
+
+        </div>
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Percentage</button>
+      </div>
+    </form>
+      </div>
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>
+
+  
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="./static/js/materialize.js"></script>
+  <script src="./static/js/init.js"></script>
+
+  </body>
+</html>
